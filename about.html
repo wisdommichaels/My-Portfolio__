@@ -1,129 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-     *{
-      margin: 0;
-      padding: 0;
-    }
-       body {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    background-color:  rgb(18, 23, 47);
-    color: white;
-  }
-        header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #547dc4;
-    padding:20px 20vh;
-    align-items: center;
-}
-  
-header img{
-    height: 30px;
-}
-
-nav{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-header nav div{
-    width: 2px;
-    height: 35px;
-    background-color: rgb(11, 3, 123);
-}
-
-.nav{
-    align-content: flex-end;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#log{
-    border-radius: 5px;
-    background-color: rgb(45, 45, 194);
-    padding: 10px;
-}
- 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul a {
-    color:  white;
-    text-decoration: none;
-}
-
-ul :hover {
-  color:  rgb(105, 238, 238);
-}
-
-section{
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    padding: 100px;
-}
-div img{
-    border-radius: 50%; object-fit: cover;
-    width: 300px;
-    height: 300px;
-    border: solid  rgb(105, 238, 238);
-}
-h1{
-display: block
-}
-footer {
-    background-color: #547dc4;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-}
-.footer{
-    margin: 0;
-}
- 
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <img src="./Assets/MY LOG.png" alt="">
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a style="text-decoration: underline; color: aqua;" href="./about.html">About Me</a></li>
-                <li><a href="./resume.html">Resume</a></li>
-                <li><a href="./work.html">Work</a></li>
-                <li id="log"><a href="./contact.html">Contact</a></li>
+
+<body class="bg-[#080e1c]">
+
+    <header class="flex flex-col md:flex-row justify-between items-center bg-blue-500 p-5">
+        <div class="flex items-center">
+            <img src="./Assets/MY LOG.png" alt="" class="h-6 md:h-5 px-8">
+            <button id="mobile-menu-btn" class="md:hidden ml-4">&#9776;</button>
+        </div>
+        <nav id="mobile-menu" class=" hidden md:flex flex-col md:flex-row md:items-end items-center gap-6 ml-4 text-[#003399]">
+            <ul class="flex flex-col md:flex-row items-center gap-7 px-7">
+                <li><a href="#" class="hover:text-white"><b>Home</b></a></li>
+                <li><a href="./about.html" class="underline text-[cyan] hover:text-white"><b>About Me</b></a></li>
+                <li><a href="./work.html" class=" hover:text-white"><b>Work</b></a></li>
+                <li><a href="./resume.html" class=" hover:text-white"> <b>Project</b></a></li>
+                <li id="log"><a href="./contact.html" class="hover:text-white"><b>Contact</b></a></li>
             </ul>
         </nav>
     </header>
-    
-    <section>
-        <h1>About Me</h1>
-        <div><img src="./Assets/image.jpg" alt="my image" height="200px"></div></div>
-        <p>Hi, my name is <b>WISDOM MICHAEL</b> and i am a <b>WEB DEVELOPER.</b> I am dedicated and determined in my goals with a passion for creating efficient and user-friendly web app and applications.</p>
-        <hr>
-    </section>
 
-    <footer>
-        <p class="footer">Copyright ©Wisdom. Alright Reserve</p></div>
-   </footer>
-   
+    <div class="container mx-auto px-4 py-8 md:py-12">
+
+        <div class="flex flex-col md:flex-row items-center">
+
+            <!-- Photo Div -->
+            <div class="md:w-1/2 md:order-1 mb-8 md:mb-0">
+                <img src="your-photo.jpg" alt="Your Photo" class="mx-auto md:mx-0 rounded-full w-40 h-40 md:w-auto md:h-auto">
+            </div>
+
+            <!-- About Text Div -->
+            <div class="md:w-1/2 md:order-2">
+                <h2 class="text-3xl font-bold text-center text-white md:text-left mb-4">About Me</h2>
+                <p class="text-lg text-white leading-relaxed text-center md:text-left">
+                    Hi there! I'm WISDOM MICHAELS, a passionate FULLSTACK WEB DEVELOPER based in Nigeria. I love creating innovative solutions and bringing ideas to life through Web Designing. With a background in Software Engineering, I strive to make a positive impact in everything I do. When I'm not coding or designing, you can find me playing football with friends, exploring new sneaker stores, exercising, and also hanging out with friends. Let's connect and create something amazing together!
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="flex justify-between bg-blue-500 text-[#003399] items-center px-8 py-2 fixed bottom-0 w-full">
+        <p class="footer">Copyright ©Wisdom. All Rights Reserved</p>
+        <ul class="flex gap-6 px-8">
+            <li><a href="#">Instagram<img src="" alt=""></a></li>
+            <li><a href="#">Twitter<img src="" alt=""></a></li>
+            <li> <a href="#">Facebook<img src="" alt=""></a></li>
+            <li><a href="#">LinkedIn<img src="" alt=""></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
+
 </html>
